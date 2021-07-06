@@ -1,0 +1,27 @@
+{
+  "name": "ej-web-avanzado-7828",
+  "version": "1.0.0",
+  "description": "Ejercicio de Desarrollo Web Avanzado 7828 con Cloud Firestore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegoismael81/Ej-Web-Avanzado-7828.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegoismael81/Ej-Web-Avanzado-7828/issues"
+  },
+  "homepage": "https://github.com/diegoismael81/Ej-Web-Avanzado-7828#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "file:node_modules/express",
+    "express-interceptor": "^1.2.0",
+    "firebase": "^8.7.0",
+    "firebase-functions": "^3.14.1",
+    "typescript": "^4.3.5"
+  }
+}
