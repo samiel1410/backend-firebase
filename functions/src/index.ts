@@ -3,7 +3,7 @@ import * as admin from 'firebase-admin';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
-import { routesCard, routesPayment, routesTreatment } from './router';
+import { routesCard, routesPayment, routesPaymentType, routesPerson, routesTreatment } from './router';
 
 //============= CONFIG ================//
 
@@ -23,7 +23,8 @@ server.use(bodyParser.urlencoded({extended: false}));
 routesPayment(server);
 routesTreatment(server);
 routesCard(server);
-
+routesPaymentType(server);
+routesPerson(server);
 //============= EXPORTACION DEL SERVIDOR ================//
 export const api = functions.https.onRequest(server);
 export { db };

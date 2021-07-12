@@ -21,10 +21,11 @@ export async function createPayment(req: Request, res: Response) {
 
 export async function listPayament(req: Request, res: Response) {       
     try {
-        let page = parseInt(req.params.page);
+        /*let page = parseInt(req.params.page);
         let limit = parseInt(req.params.limit);
-        let avoid = page == 1 ? 0 : (page - 1) * limit;
-        let snapshot = await db.collection(collection).orderBy('title').offset(avoid).limit(limit).get();
+        let avoid = page == 1 ? 0 : (page - 1) * limit;*/
+        let idperson = req.params.idperson;
+        let snapshot = await db.collection(collection).where('idperson','==',idperson).get();        
         return res.status(200).json(snapshot.docs.map(doc => Payment(doc.data(), doc.id)));        
     } catch (err) {
         return handleError(res, err);
