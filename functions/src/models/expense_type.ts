@@ -1,16 +1,16 @@
 /* Modelo representa el conceptos que van a intearctuar en la app */
 /*============ Paciente ============*/
-export interface PaymentType {    
+export interface ExpenseType {    
     name: string,
     description: string,
     image: string,
   
 }
 
-export function PaymentType(data :any, id?:string){
+export function ExpenseType(data :any, id?:string){
     const {name, description, image } = data;
 
-    let object :PaymentType = { 
+    let object :ExpenseType = { 
                         
         name: name,
         description: description,
