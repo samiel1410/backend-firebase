@@ -8,11 +8,12 @@ export interface Payment {
     address: string,
     typePage: string,
     date : string,
-    idperson: string    
+    idperson: string,
+    detailPay : string  
 }
 
 export function Payment(data :any, id?:string){
-    const {title, description, amount, address, typePage, date, idperson } = data;
+    const {title, description, amount, address, typePage, date, idperson, detailPay } = data;
 
     let object :Payment = { 
         idpayment: id,                
@@ -22,7 +23,8 @@ export function Payment(data :any, id?:string){
         address: address,
         typePage: typePage,
         date: date,
-        idperson: idperson
+        idperson: idperson,
+        detailPay : detailPay
     };
     return object;
 }

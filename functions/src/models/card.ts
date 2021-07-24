@@ -3,15 +3,17 @@
 export interface Card {
     idcard? :string,
     name: string,
+    idperson: string  
     
 }
 
 export function Card(data :any, id?:string){
-    const {name } = data;
+    const {name , idperson } = data;
 
     let object :Card = { 
         idcard: id,                
         name: name,
+        idperson : idperson,
         
     };
     return object;
