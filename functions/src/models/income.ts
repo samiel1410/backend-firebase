@@ -4,13 +4,14 @@ export interface Income {
     idincome? :string,
     category: string,
     description: string,
-    amount: string,
+    amount: number,
     date: string,
+    image:string
     
 }
 
 export function Income(data :any, id?:string){
-    const {category, description, amount, date } = data;
+    const {category, description, amount, date , image } = data;
 
     let object :Income = { 
         idincome: id,                
@@ -18,6 +19,7 @@ export function Income(data :any, id?:string){
         description: description,
         amount : amount,
         date : date,
+        image:image,
         
     };
     return object;

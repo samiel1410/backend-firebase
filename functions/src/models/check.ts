@@ -17,6 +17,7 @@ export function Check(data :any, id?:string){
         bankinInstitution: bankinInstitution,
         numberCheck: numberCheck,
         ownerName: ownerName,
+        
         checkIdentification: checkIdentification,
         
     };
