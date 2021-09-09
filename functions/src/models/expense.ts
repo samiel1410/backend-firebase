@@ -7,12 +7,13 @@ export interface Expense {
     address: string,
     categori: string,
     date : string,
-    image:string
-    photo:string
+    image:string,
+    photo:string,
+    georeference:object
 }
 
 export function Expense(data :any, id?:string){
-    const {description, amount, categori, address, date, image ,photo } = data;
+    const {description, amount, categori, address, date, image ,photo, georeference } = data;
 
     let object :Expense = { 
         idexpense: id,               
@@ -22,7 +23,8 @@ export function Expense(data :any, id?:string){
         address: address,
         date: date,
         image:image,
-        photo:photo
+        photo:photo,
+        georeference:georeference
         
     };
     return object;
